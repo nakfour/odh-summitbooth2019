@@ -37,9 +37,16 @@ class mymodel(object):
         result = "PASS"
         featurearray=[float(i) for i in x.split(',')]
         print(featurearray)
-        rowdf = pd.DataFrame([featurearray], columns = ['Time','V1','V2','V3','V4', 'V5','V6','V7','V8','V9','V10','V11','V12','V13','V14','V15','V16','V17','V18','V19','V20','V21','V22','V23','V24','V25','V26','V27','V28','Amount'])
+        rowdf = pd.DataFrame([featurearray], columns = ['V3','V4','V10','V11','V12','V14','V17','Amount'])
         print(rowdf)
         predictions = self.clf.predict(rowdf)
         #predictions = self.clf.predict_proba()
         # initialize list of lists
         return predictions
+        
+    def metrics(self):
+        return [
+            {"type":"COUNTER","key":"mycounter","value":1}, # a counter which will increase by the given value
+            {"type":"GAUGE","key":"mygauge","value":100}, # a gauge which will be set to given value
+            {"type":"TIMER","key":"mytimer","value":20.2}, # a timer which will add sum and count metrics - assumed millisecs
+            ]
