@@ -27,7 +27,7 @@
                                 "name": "mymodel",
                                 "resources": {
                                     "requests": {
-                                        "memory": "1Mi"
+                                        "memory": "10Mi"
                                     }
                                 }
                             }
