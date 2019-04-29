@@ -27,7 +27,7 @@ class mymodel(object):
         key = "uploaded/model.pkl"
         try:
         	print("Trying to download model")
-        	s3.download_file(Bucket='MODEL', Key=key, Filename="model.pkl")
+        	s3.download_file(Bucket='MODEL', Key=key, Filename="/tmp/model.pkl")
         except botocore.exceptions.ClientError as e:
             if e.response['Error']['Code'] == "404":
                 print("The object does not exist.")
@@ -36,7 +36,7 @@ class mymodel(object):
 
         # Replace with path of trained model
         print("Loading model to seldon")
-        model_path = 'model.pkl'
+        model_path = '/tmp/model.pkl'
         #self.model = load_model(model_path)
         self.clf = joblib.load(model_path) 
         print("Model uploaded to class")
