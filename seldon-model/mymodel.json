@@ -6,16 +6,16 @@
             "app": "seldon"
         },
         "name": "mymodel",
-        "namespace": "opendatahub"
+        "namespace": "booth-demo"
     },
     "spec": {
         "annotations": {
-            "project_name": "opendatahub",
+            "project_name": "booth-demo",
             "deployment_version": "0.1"
         },
         "name": "mymodel",
-        "oauth_key": "oauth-key",
-        "oauth_secret": "oauth-secret",
+        "oauth_key": "oauth-key2",
+        "oauth_secret": "oauth-secret2",
         "predictors": [
             {
                 "componentSpecs": [{
