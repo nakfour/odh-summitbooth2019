@@ -22,7 +22,8 @@ class mymodel(object):
         self.proba_1 = 0
         
         # Create an S3 client
-        s3 = boto3.client(service_name='s3',aws_access_key_id='foo', aws_secret_access_key='bar', endpoint_url='http://ceph:8000')
+        #s3 = boto3.client(service_name='s3',aws_access_key_id='foo', aws_secret_access_key='bar', endpoint_url='http://ceph:8000')
+        s3 = boto3.client(service_name='s3',aws_access_key_id='I7GAW8M2WZW4CASD7S4S', aws_secret_access_key='0iQVuuL3LBU4jaP5ap3y9CiLHZQZUIxP7m4jGowq', endpoint_url='http://rook-ceph-rgw-my-store-rook-ceph.apps.cluster-dc86.dc86.openshiftworkshop.com/')
         key = "uploaded/model.pkl"
         try:
         	print("Trying to download model")
